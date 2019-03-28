@@ -11,7 +11,9 @@ DCSA. All right reserved.
 
 
 use
-'''
+
+
+```c++
 
 
 #include <Sorter.h>
@@ -49,4 +51,4 @@ void loop() {
 
 }
 
-'''
+```
