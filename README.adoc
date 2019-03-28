@@ -8,3 +8,45 @@ https://github.com/xangcastle/arduino-sorter.git
 == License ==
 
 DCSA. All right reserved.
+
+
+use
+'''
+
+
+#include <Sorter.h>
+
+String inputString = "";
+bool stringComplete = false;
+Sorter sorter(2,3,4,5);
+
+
+void setup() {
+  Serial.begin(9600);
+  inputString.reserve(200);
+}
+
+void loop() {
+
+   if (Serial.available() > 0){
+
+      while (Serial.available()) {
+        char inChar = (char)Serial.read();
+        inputString += inChar;
+        if (inChar == '\n') {
+          stringComplete = true;
+        }
+
+      }
+      if (stringComplete) {
+        int n = sorter.toSort(inputString);
+        Serial.println(inputString);
+        Serial.println(n);
+        inputString = "";
+        stringComplete = false;
+      }
+    }
+
+}
+
+'''
