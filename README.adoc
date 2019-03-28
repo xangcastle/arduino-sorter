@@ -1,0 +1,10 @@
+= Sorter Library for Arduino =
+
+The Sorter library simplifies communication between the ATmega32U4 and the Sorter Check Module.
+
+For more information about this library please visit us at
+https://github.com/xangcastle/arduino-sorter.git
+
+== License ==
+
+DCSA. All right reserved.
